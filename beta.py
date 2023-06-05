@@ -599,7 +599,7 @@ def load_save(save):
         if load == None:
             return
         ver = load[0]
-        if ver > 4:
+        if ver > 5:
             alert('Downgrading a world is not supported. Close the game.')
             raise SystemExit(0)
         else:
