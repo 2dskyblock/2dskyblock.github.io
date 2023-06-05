@@ -600,7 +600,7 @@ def format_meta(item, meta):
 
 # Display an image
 def set_img(x, y, new):
-    document[str(y) + '-' + str(x)].attrs['src'] = 'skyblock-assets-0-0-4/' + str(new) + '.png'
+    document[str(y) + '-' + str(x)].attrs['src'] = 'https://2dskyblock.github.io/assets/' + str(new) + '.png'
 
 def show_controls(_ev):
     alert('Controls:\n\nClick to interact\nUp/down arrow -> scroll through inventory\n' + \
@@ -1219,7 +1219,7 @@ def handle_key(event):
             hide_debug = True
     elif key == 71:
         if gen_shop:
-            document['gen'].style.display = 'none'
+            document['gen'].style.display = 'no ne'
             document['game'].style.display = 'inline'
             gen_shop = False
         else:
@@ -1314,7 +1314,7 @@ def handle_key(event):
             document['game'].style.display = 'none'
             document['gen'].style.display = 'none'
             document['slscreen'].style.display = 'inline'
-            b_show = True
+            b_show = True 
         else:
             document['slscreen'].style.display = 'none'
             document['game'].style.display = 'inline'
@@ -1365,7 +1365,7 @@ def random_tick():
                 if y != 0:  
                     t.append(tiles[y-1][x])
                 if y != 5:
-                    t.append(tiles[y+1][x])
+                    t.append(tiles[y+1][x]) 
                 if randint(sum([1 if a == 2 else 0 for a in t]) % 4, 3) == 3:
                     stats[7] += 1
                     tiles[y][x] = 2
@@ -1421,7 +1421,7 @@ def random_tick():
                 if int(randint(1, 120)/rts) == 1:
                     tiles[y][x] = 80
             elif c == 80:
-                if int(randint(1, 120)/rts) == 1:
+                if int(randint(1, 120)/rts) == 1: 
                     tiles[y][x] = 81
         if randint(1, 2) == 1:
             random_tick()
@@ -1487,7 +1487,7 @@ def _place(x, y, tiles, inventory, fm=None):
                         inventory[d] = [1, 0]
                         if len(inventory) == 1:
                             sel = tuple(inventory)[0]
-            tiles[y][x] = B
+            tiles[y][x] = B 
     return tiles, inventory, mode
 
 def place(x, y, inventory):
@@ -1547,7 +1547,7 @@ def mainloop():
         if levels % 5 == 0 and levels != 0:
             gen_money += 1
     # render the tiles
-    tiles = all_tiles[z]
+    tiles = all_tiles[z] 
     for y in range(6):
         for x in range(18):
             set_img(x, y, tiles[y][x])
