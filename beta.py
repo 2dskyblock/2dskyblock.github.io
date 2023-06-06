@@ -66,7 +66,7 @@ def shuffle(x):
 
 # Assets
 
-sver = 'skyblock'
+sver = 'skyblock-beta'
 
 items = [
     [1, 'Air', 0, None, ['unbreakable']],
