@@ -719,7 +719,7 @@ def _save():
 def save():
     storage[sver] = _save()
 
-def upgrade_shop():
+def upgrade_bind():
     global document, alert, inventory, money, layer_price, gen_level, stats, rts, has_servant, gen_money
     while True:
         item = input('Enter the item you want to buy (Enter nothing to exit)')
@@ -834,8 +834,7 @@ def upgrade_shop():
                 alert('Not enough money!')
         else:
             alert('Invalid item!')
-    document['upgrades'].style.display = 'none'
-    document['game'].style.display = 'inline'
+document['upgrade-buy'].bind('click', upgrade_bind)
 
 def servant_add_layer(_ev):
     global servant_layers, l_offset, all_tiles
@@ -1127,10 +1126,11 @@ for y in range(6):
         document[str(y) + '-' + str(x)].bind('mouseout', get_listen_exit(x, y))
 
 gen_shop = False
+show_upgrade = False
 
 # Main key handling
 def handle_key(event):
-    global money, inventory, prices, z, sel, storage, sver, tags, servant_shop, hide_debug, gen_shop
+    global money, inventory, prices, z, sel, storage, sver, tags, servant_shop, hide_debug, gen_shop, show_upgrade
     key = event.keyCode
     if event.ctrlKey == True:
         return
@@ -1202,13 +1202,18 @@ def handle_key(event):
                 del inventory[i]
             money += prices[i]
     elif key == 79:
-        document['crafting'].style.display = 'none'
-        document['slscreen'].style.display = 'none'
-        document['servantm'].style.display = 'none'
-        document['game'].style.display = 'none'
-        document['gen'].style.display = 'none'
-        document['upgrades'].style.display = 'inline'
-        set_timeout(upgrade_shop, 1000)
+        if show_upgrade:
+            document['upgrades'].style.display = 'none'
+            document['game'].style.display = 'inline'
+            show_upgrade = False
+        else:
+            document['crafting'].style.display = 'none'
+            document['slscreen'].style.display = 'none'
+            document['servantm'].style.display = 'none'
+            document['game'].style.display = 'none'
+            document['gen'].style.display = 'none'
+            document['upgrades'].style.display = 'inline'
+            show_upgrade = True
     elif key == 87:
         if z != len(all_tiles) - 1:
             stats[5] += 1
