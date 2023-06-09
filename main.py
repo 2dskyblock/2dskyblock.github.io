@@ -1,5 +1,6 @@
 
 
+
 '''
 Copyright (c) 2023 speedydelete
 
@@ -534,17 +535,6 @@ def show_controls(_ev):
           'alt+Q -> sell all of selected item\nO -> shop\nalt+S -> save\nalt+shift+W -> wipe save\n' + \
           'A -> avatar\nB -> backup screen\nG -> generator settings')
 
-def show_copyright(_ev):
-    alert('''All images are from the Minecraft Wiki or are screenshots from Minecraft: Java Edition and are licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License 4.0
-    
-Copyright (c) 2023 speedydelete
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.''')
-
 def flatten(x):
     res = []
     for item in x:
@@ -595,7 +585,6 @@ c_show = False
 # other stuff
 gen_level = 0
 document['controls'].bind('click', show_controls)
-document['copyright'].bind('click', show_copyright)
 stats = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 xp = 0
 levels = 0
@@ -608,7 +597,6 @@ servant_layers = []
 has_servant = False
 game_time = 360
 b_show = False
-document['debug'].style.display = 'none'
 has_gens = [0]
 gen_mode = 0
 gen_money = 0
@@ -1092,8 +1080,6 @@ document['cb-smelting'].bind('click', get_craft_switch('cd-smelting', list(acraf
 
 servant_shop = False
 
-hide_debug = True
-
 sel_x = -1
 sel_y = -1
 
@@ -1130,19 +1116,12 @@ show_upgrade = False
 
 # Main key handling
 def handle_key(event):
-    global money, inventory, prices, z, sel, storage, sver, tags, servant_shop, hide_debug, gen_shop, show_upgrade
+    global money, inventory, prices, z, sel, storage, sver, tags, servant_shop, gen_shop, show_upgrade
     key = event.keyCode
     if event.ctrlKey == True:
         return
     if key == 83 and event.altKey == True:
         save()
-    elif key == 82 and event.altKey == True:
-        if hide_debug:
-            document['debug'].style.display = 'inline'
-            hide_debug = False
-        else:
-            document['debug'].style.display = 'none'
-            hide_debug = True
     elif key == 71:
         if gen_shop:
             document['gen'].style.display = 'no ne'
@@ -1251,6 +1230,97 @@ def handle_key(event):
             document['game'].style.display = 'inline'
             b_show = False
 document.bind('keydown', handle_key)
+
+def back_btn(_ev):
+    document['upgrades'].style.display = 'none'
+    document['crafting'].style.display = 'none'
+    document['servantm'].style.display = 'none'
+    document['gen'].style.display = 'none'
+    document['slscreen'].style.display = 'none'
+    document['game'].style.display = 'inline'
+    b_show = False
+    c_show = False
+    servant_shop = False
+    gen_shop = False
+    show_upgrade = False
+document['back1'].bind('click', back_btn)
+document['back2'].bind('click', back_btn)
+document['back3'].bind('click', back_btn)
+document['back4'].bind('click', back_btn)
+document['back5'].bind('click', back_btn)
+
+# buttons
+
+def button_up_layer(_ev):
+    global z, all_tiles
+    if z < len(all_tiles):
+        z += 1
+document['b-up'].bind('click', button_up_layer)
+
+def button_down_layer(_ev):
+    global z
+    if z != 0:
+        z -= 1
+document['b-down'].bind('click', button_down_layer)
+
+def button_up_inv(_ev):
+    global inventory, sel
+    inventory.move_to_end(tuple(inventory)[0])
+    sel = tuple(inventory)[0]
+document['inv-u'].bind('click', button_up_inv)
+
+def button_down_inv(_ev):
+    global inventory, sel
+    for _ in range(len(inventory) - 1):
+        inventory.move_to_end(tuple(inventory)[0])
+    sel = tuple(inventory)[0]
+document['inv-d'].bind('click', button_down_inv)
+
+def button_save(_ev):
+    save()
+document['b-save'].bind('click', button_save)
+
+def button_stats(_ev):
+    display_stats()
+document['b-stats'].bind('click', button_stats)
+
+def button_craft(_ev):
+    global document, c_show
+    document['game'].style.display = 'none'
+    document['crafting'].style.display = 'inline'
+    c_show = True
+document['b-craft'].bind('click', button_craft)
+
+def button_shop(_ev):
+    global document, show_upgrade
+    document['game'].style.display = 'none'
+    document['upgrades'].style.display = 'inline'
+    show_upgrade = True
+document['b-shop'].bind('click', button_shop)
+
+def button_servant(_ev):
+    global document, servant_shop, has_servant
+    if has_servant:
+        document['game'].style.display = 'none'
+        document['servantm'].style.display = 'inline'
+        servant_shop = True
+    else:
+        alert('You don\'t have an avatar!')
+document['b-avatar'].bind('click', button_servant)
+
+def button_gen(_ev):
+    global document, gen_shop
+    document['game'].style.display = 'none'
+    document['gen'].style.display = 'inline'
+    gen_shop = True
+document['b-gen'].bind('click', button_gen)
+
+def button_backup(_ev):
+    global document, b_show
+    document['game'].style.display = 'none'
+    document['slscreen'].style.display = 'inline'
+    b_show = True
+document['b-backup'].bind('click', button_backup)
 
 def slsave_btn(_ev):
     document['sltxt'].value = _save()
@@ -1525,24 +1595,9 @@ def mainloop():
     f_inventory ='<br>'.join([f'{i[1][0]}x {names[i[0]]}' + format_meta(i[0], i[1][1]) for i in inventory.items() if i[1][0] > 0])
     document['inventory'].innerHTML = f_inventory
     document['inventory2'].innerHTML = f_inventory
-    # debug
-    debug = f'fps: {fps}'
-    if sel_x != -1 and sel_y != -1:
-        block = all_tiles[z][sel_y][sel_x]
-        debug += f'<br>block: {block} ({names[block]})'
-        debug += f'<br>x: {sel_x}, y: {sel_y}, z: {z}'
-    if len(tuple(inventory)) > 0:
-        try:
-            sel = tuple(inventory)[0]
-            debug += f'<br>item: {sel} ({names[sel]}), c: {inventory[sel][0]}, m: {inventory[sel][1]}'
-        except Exception as e:
-            import traceback
-            alert(traceback.format_exc())
-    debug += f'<br>R: {rts}, T: {round(real_time/12, 2)}, C: {c % 1000}'
-    debug += f'<br>NL: {nl}, XP: {xp}, LO: {l_offset}, HS: {1 if has_servant else 0}'
-    document['debug'].innerHTML = debug
     # redo the loop
     set_timeout(mainloop, 20)
+    
 # start the game
 document['capsule'].style.display = 'block'
 set_timeout(mainloop, 20)
