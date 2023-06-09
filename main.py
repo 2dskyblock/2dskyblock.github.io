@@ -1253,7 +1253,7 @@ document['back5'].bind('click', back_btn)
 
 def button_up_layer(_ev):
     global z, all_tiles
-    if z < len(all_tiles):
+    if z != len(all_tiles) - 1:
         z += 1
 document['b-up'].bind('click', button_up_layer)
 
