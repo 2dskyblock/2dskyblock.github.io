@@ -719,7 +719,7 @@ def _save():
 def save():
     storage[sver] = _save()
 
-def upgrade_bind():
+def upgrade_bind(_ev):
     global document, alert, inventory, money, layer_price, gen_level, stats, rts, has_servant, gen_money
     while True:
         item = input('Enter the item you want to buy (Enter nothing to exit)')
