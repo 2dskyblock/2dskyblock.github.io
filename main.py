@@ -1341,7 +1341,7 @@ def sell_btn(_ev):
     money += prices[i]
 
 def sell_all_btn(_ev):
-    global money
+    global money, stats
     i = tuple(inventory)[0]
     money += prices[i] * inventory[i][0]
     stats[8] += prices[i] * inventory[i][0]
