@@ -1380,8 +1380,7 @@ def random_tick():
         sel = tuple(inventory)[0]
     except IndexError:
         sel = 0
-    alert(f'random tick, {rts}, {len(all_tiles)}, {rts // 5}')
-    for _ in range(int(rts // 5)):
+    for _ in range(int(rts // 5) + 1):
         for tiles in all_tiles:
             x = randint(0, 17)
             y = randint(0, 5)
