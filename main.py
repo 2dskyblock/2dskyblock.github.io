@@ -1386,6 +1386,7 @@ def random_tick():
             y = randint(0, 5)
             c = tiles[y][x]
             if c == 4:
+                alert(rts)
                 if int(randint(1, 500)/rts) != 1:
                     continue
                 if y == 0 or x == 0 or y == 5 or x == 17:
