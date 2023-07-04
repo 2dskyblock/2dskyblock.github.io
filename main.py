@@ -1332,7 +1332,9 @@ document['slsave'].bind('click', slsave_btn)
 document['slload'].bind('click', slload_btn)
 
 def sell_btn(_ev):
-    global money
+    global money, inventory
+    if len(inventory) != 0:
+        return None
     i = tuple(inventory)[0]
     inventory[i][0] -= 1
     stats[8] += prices[i]
@@ -1341,7 +1343,9 @@ def sell_btn(_ev):
     money += prices[i]
 
 def sell_all_btn(_ev):
-    global money, stats
+    global money, stats, inventory
+    if len(inventory) != 0:
+        return None
     i = tuple(inventory)[0]
     money += prices[i] * inventory[i][0]
     stats[8] += prices[i] * inventory[i][0]
