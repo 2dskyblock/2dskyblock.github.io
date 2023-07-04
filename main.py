@@ -1124,7 +1124,7 @@ def handle_key(event):
         save()
     elif key == 71:
         if gen_shop:
-            document['gen'].style.display = 'no ne'
+            document['gen'].style.display = 'none'
             document['game'].style.display = 'inline'
             gen_shop = False
         else:
@@ -1286,14 +1286,22 @@ document['b-stats'].bind('click', button_stats)
 
 def button_craft(_ev):
     global document, c_show
+    document['upgrades'].style.display = 'none'
+    document['servantm'].style.display = 'none'
+    document['slscreen'].style.display = 'none'
     document['game'].style.display = 'none'
+    document['gen'].style.display = 'none'
     document['crafting'].style.display = 'inline'
     c_show = True
 document['b-craft'].bind('click', button_craft)
 
 def button_shop(_ev):
     global document, show_upgrade
+    document['crafting'].style.display = 'none'
+    document['slscreen'].style.display = 'none'
+    document['servantm'].style.display = 'none'
     document['game'].style.display = 'none'
+    document['gen'].style.display = 'none'
     document['upgrades'].style.display = 'inline'
     show_upgrade = True
 document['b-shop'].bind('click', button_shop)
@@ -1301,7 +1309,11 @@ document['b-shop'].bind('click', button_shop)
 def button_servant(_ev):
     global document, servant_shop, has_servant
     if has_servant:
+        document['crafting'].style.display = 'none'
+        document['slscreen'].style.display = 'none'
+        document['upgrades'].style.display = 'none'
         document['game'].style.display = 'none'
+        document['gen'].style.display = 'none'
         document['servantm'].style.display = 'inline'
         servant_shop = True
     else:
@@ -1310,14 +1322,22 @@ document['b-avatar'].bind('click', button_servant)
 
 def button_gen(_ev):
     global document, gen_shop
+    document['crafting'].style.display = 'none'
+    document['slscreen'].style.display = 'none'
+    document['upgrades'].style.display = 'none'
     document['game'].style.display = 'none'
+    document['servantm'].style.display = 'none'
     document['gen'].style.display = 'inline'
     gen_shop = True
 document['b-gen'].bind('click', button_gen)
 
 def button_backup(_ev):
     global document, b_show
+    document['crafting'].style.display = 'none'
+    document['upgrades'].style.display = 'none'
+    document['servantm'].style.display = 'none'
     document['game'].style.display = 'none'
+    document['gen'].style.display = 'none'
     document['slscreen'].style.display = 'inline'
     b_show = True
 document['b-backup'].bind('click', button_backup)
