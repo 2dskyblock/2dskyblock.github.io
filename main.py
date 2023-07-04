@@ -258,7 +258,7 @@ generator = [
     [1, [109, 112, 113, 114] * 10 + [139], 'gb-oceanf', 'Ocean Floor'],
     [3, [132, 133, 133] * 50 + [156], 'gb-bdelta', 'Basalt Deltas'],
     [2, [152, 133, 165], 'gb-geode', 'Amethyst Geode'],
-    [3, [107, 108, 156] * 30 + [156], 'gb-ssvall', 'Soul Sand Valley'],
+    [3, [107, 108, 156] * 40 + [156], 'gb-ssvall', 'Soul Sand Valley'],
     [6, [134, 135, 136, 137, 138] * 9 + [139] * 3 + [41], 'gb-bastion', 'Bastion'],
 ]
 
