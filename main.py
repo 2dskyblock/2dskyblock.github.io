@@ -1380,13 +1380,14 @@ def random_tick():
         sel = tuple(inventory)[0]
     except IndexError:
         sel = 0
+    alert('random tick')
     for _ in range(int(rts // 5)):
         for tiles in all_tiles:
             x = randint(0, 17)
             y = randint(0, 5)
             c = tiles[y][x]
             if c == 4:
-                alert(rts)
+                alert(f'tree growth: {rts}')
                 if int(randint(1, 500)/rts) != 1:
                     continue
                 if y == 0 or x == 0 or y == 5 or x == 17:
