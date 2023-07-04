@@ -813,8 +813,8 @@ def upgrade_bind(_ev):
             else:
                 alert('Not enough money!')
         elif item.strip() == '10':
-            if money >= 5000:
-                money -= 5000
+            if money >= 1000:
+                money -= 1000
                 stats[6] += 1
                 gen_money += 1
                 break
