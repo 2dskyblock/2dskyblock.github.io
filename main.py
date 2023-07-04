@@ -785,7 +785,7 @@ def upgrade_bind(_ev):
             else:
                 alert('Not enough money!')
         elif item.strip() == '7':
-            if money >= 25:
+            if money >= 100:
                 stats[6] += 1
                 money -= 100
                 if 2 not in inventory:
