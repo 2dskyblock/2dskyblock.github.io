@@ -1346,11 +1346,6 @@ def sell_all_btn(_ev):
     money += prices[i] * inventory[i][0]
     stats[8] += prices[i] * inventory[i][0]
     del inventory[i]
-    inventory[i][0] -= 1
-    stats[8] += prices[i]
-    if inventory[i][0] == 0:
-        del inventory[i]
-    money += prices[i]
 
 document['b-sell'].bind('click', sell_btn)
 document['b-sell-all'].bind('click', sell_all_btn)
