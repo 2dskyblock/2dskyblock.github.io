@@ -1122,6 +1122,13 @@ def handle_key(event):
         return
     if key == 83 and event.altKey == True:
         save()
+    elif key == 27:
+        document['gen'].style.display = 'none'
+        document['crafting'].style.display = 'none'
+        document['slscreen'].style.display = 'none'
+        document['upgrades'].style.display = 'none'
+        document['servantm'].style.display = 'none'
+        document['game'].style.display = 'inline'
     elif key == 71:
         if gen_shop:
             document['gen'].style.display = 'none'
