@@ -529,12 +529,6 @@ def format_meta(item, meta):
 def set_img(x, y, new):
     document[str(y) + '-' + str(x)].attrs['src'] = 'https://2dskyblock.github.io/assets/' + str(new) + '.png'
 
-def show_controls(_ev):
-    alert('Controls:\n\nClick to interact\nUp/down arrow -> scroll through inventory\n' + \
-          'W -> move 1 layer up\nS -> move 1 layer down\nC -> crafting\nQ -> sell 1 item\n' + \
-          'alt+Q -> sell all of selected item\nO -> shop\nalt+S -> save\nalt+shift+W -> wipe save\n' + \
-          'A -> avatar\nB -> backup screen\nG -> generator settings')
-
 def flatten(x):
     res = []
     for item in x:
@@ -584,7 +578,6 @@ document['gen'].style.display = 'none'
 c_show = False
 # other stuff
 gen_level = 0
-document['controls'].bind('click', show_controls)
 stats = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 xp = 0
 levels = 0
