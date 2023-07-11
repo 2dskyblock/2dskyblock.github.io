@@ -563,7 +563,7 @@ def format_item(i):
     item = i[0]
     durability = i[1][1]
     if item in tags['tools']:
-        a = ' (' + str(round(meta*100, 1)) + '%)'
+        a = ' (' + str(round(durability*100, 1)) + '%)'
     else:
         a = ''
     return f'{i[1][0]}x {names[i[0]]}' + a
