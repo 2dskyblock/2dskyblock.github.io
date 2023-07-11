@@ -1440,7 +1440,7 @@ def mainloop():
     game_time += (1/fps if fps != 0 else 0)
     if c % choice([15, 16, 17]) == 0:
         one_three_tick()
-    if c % 250 == 0:
+    if c % 1800 == 0:
         storage[storage_key] = _save()
     nl = round((levels+2)**2*10)
     if xp > nl:
