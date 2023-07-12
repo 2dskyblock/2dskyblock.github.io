@@ -662,7 +662,7 @@ def _save():
                    6:z,7:l_offset,8:gen_level,9:stats,10:xp,11:levels,12:rts,\
                    13:servant_inv,14:servant_break,15:servant_place,\
                    16:servant_sell,17:has_servant,18:servant_layers,\
-                   19:game_time,20:has_gens,21:gen_mode,22:gen_money})
+                   19:game_time,20:has_gens,21:gen_mode,22:gen_money,23:game_seed})
 
 # Add a layer
 def add_layer(down=False):
