@@ -1046,7 +1046,7 @@ def button_backup(_ev):
 
 def sell_btn(_ev):
     global money, inventory
-    if len(inventory) != 0:
+    if len(inventory) == 0:
         return None
     i = tuple(inventory)[0]
     inventory[i][0] -= 1
@@ -1057,7 +1057,7 @@ def sell_btn(_ev):
 
 def sell_all_btn(_ev):
     global money, stats, inventory
-    if len(inventory) != 0:
+    if len(inventory) == 0:
         return None
     i = tuple(inventory)[0]
     money += prices[i] * inventory[i][0]
