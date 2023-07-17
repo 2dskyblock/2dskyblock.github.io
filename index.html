@@ -21,18 +21,6 @@
                 padding: 5;
             }
         </style>
-	<script>
-function openGame() {
-var win = window.open()
-var url = "https://2dskyblock.github.io/game"
-var iframe = win.document.createElement('iframe')
-iframe.style.width = "100%";
-iframe.style.height = "100%";
-iframe.style.border = "none";
-iframe.src = url
-win.document.body.appendChild(iframe)
-}
-        </script>
     </head>
     <body>
         <h1><a href="https://2dskyblock.github.io/game">2D Skyblock</a></h1>
@@ -49,7 +37,14 @@ win.document.body.appendChild(iframe)
                 <li><a href="https://docs.google.com/document/d/1-_h-ix1X1HI79gos2GmJPYJ51RtZRRQjSVCaPENzfdw">Planned features</a></li>
         </p>
         <br>
-		<p><button onclick="openGame()">Open Cloaked</button> (bypasses stuff, and remember to bookmark the tab!)</p>
+	    <p>How to access the game if it is blocked:
+	    <ol>
+            <li>Add a bookmark for this page</li>
+            <li>Edit the bookmark, and in the URL field, replace it with "javascript:var win = window.open();var url = "https://2dskyblock.github.io/game";var iframe = win.document.createElement('iframe');iframe.style.width = "100%";iframe.style.height = "100%";iframe.style.border = "none";document.write("");iframe.src = "https://2dskyblock.github.io/game";urlwin.document.body.(iframe)"</li>
+            <li>Also, rename it to something innocuous.</li>
+            <li>Save the new bookmark</li>
+            <li>Now, whenever you want to access the game, simply go to an innocuous site and click the bookmark!</li>
+        </ol>
 	    <br>
         <p>Hotkeys:</p>
         <table style="border: 2px solid black; border-collapse: collapse">
