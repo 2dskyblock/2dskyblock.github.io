@@ -1634,7 +1634,7 @@ document['gendiv'].innerHTML += o
 document['gb-plains'].bind('click', get_gen_shop_sel(0))
 document['gb-plains'].innerHTML = 'Select'
 for i, x in enumerate(generator[1:]):
-    document[x[2]].bind('click', get_gen_shop_buy(i, x[2]))
+    document[x[2]].bind('click', get_gen_shop_buy(i + 1, x[2]))
 
 # Shop html
 o = ''
