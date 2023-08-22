@@ -70,7 +70,7 @@ def shuffle(x):
 
 # Constants
 
-storage_key = 'skyblock'
+storage_key = 'skyblock-23w29a'
 
 version = '23w29a'
 version_number = 0
