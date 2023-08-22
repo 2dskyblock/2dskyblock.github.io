@@ -1,0 +1,96 @@
+<! DOCTYPE html><!Copyright (c) 2023 speedydelete
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.>
+<html><head><title>
+
+2D Skyblock 0.0.4
+
+</title><meta charset="utf-8"><style>
+
+.inv {max-height:150px}
+.s {border: 1px solid black; padding: 5; margin: 5;}
+table {border-collapse: collapse;}
+td {border:none; padding: 0; margin: 0;}
+
+</style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.0/brython.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.0/brython_stdlib.js"></script></head>
+<body onload="brython()" id="body" style="tab-size:4;"><div id="capsule" style="position:relative;display:none;" height=100% width=100%><div id='game'>
+<table><tr><td><img id="0-0" height=70 width=70></td><td><img id="0-1" height=70 width=70></td><td><img id="0-2" height=70 width=70></td><td><img id="0-3" height=70 width=70></td><td><img id="0-4" height=70 width=70></td><td><img id="0-5" height=70 width=70></td><td><img id="0-6" height=70 width=70></td><td><img id="0-7" height=70 width=70></td><td><img id="0-8" height=70 width=70></td><td><img id="0-9" height=70 width=70></td><td><img id="0-10" height=70 width=70></td><td><img id="0-11" height=70 width=70></td><td><img id="0-12" height=70 width=70></td><td><img id="0-13" height=70 width=70></td><td><img id="0-14" height=70 width=70></td><td><img id="0-15" height=70 width=70></td><td><img id="0-16" height=70 width=70></td><td><img id="0-17" height=70 width=70></td></tr><tr><td><img id="1-0" height=70 width=70></td><td><img id="1-1" height=70 width=70></td><td><img id="1-2" height=70 width=70></td><td><img id="1-3" height=70 width=70></td><td><img id="1-4" height=70 width=70></td><td><img id="1-5" height=70 width=70></td><td><img id="1-6" height=70 width=70></td><td><img id="1-7" height=70 width=70></td><td><img id="1-8" height=70 width=70></td><td><img id="1-9" height=70 width=70></td><td><img id="1-10" height=70 width=70></td><td><img id="1-11" height=70 width=70></td><td><img id="1-12" height=70 width=70></td><td><img id="1-13" height=70 width=70></td><td><img id="1-14" height=70 width=70></td><td><img id="1-15" height=70 width=70></td><td><img id="1-16" height=70 width=70></td><td><img id="1-17" height=70 width=70></td></tr><tr><td><img id="2-0" height=70 width=70></td><td><img id="2-1" height=70 width=70></td><td><img id="2-2" height=70 width=70></td><td><img id="2-3" height=70 width=70></td><td><img id="2-4" height=70 width=70></td><td><img id="2-5" height=70 width=70></td><td><img id="2-6" height=70 width=70></td><td><img id="2-7" height=70 width=70></td><td><img id="2-8" height=70 width=70></td><td><img id="2-9" height=70 width=70></td><td><img id="2-10" height=70 width=70></td><td><img id="2-11" height=70 width=70></td><td><img id="2-12" height=70 width=70></td><td><img id="2-13" height=70 width=70></td><td><img id="2-14" height=70 width=70></td><td><img id="2-15" height=70 width=70></td><td><img id="2-16" height=70 width=70></td><td><img id="2-17" height=70 width=70></td></tr><tr><td><img id="3-0" height=70 width=70></td><td><img id="3-1" height=70 width=70></td><td><img id="3-2" height=70 width=70></td><td><img id="3-3" height=70 width=70></td><td><img id="3-4" height=70 width=70></td><td><img id="3-5" height=70 width=70></td><td><img id="3-6" height=70 width=70></td><td><img id="3-7" height=70 width=70></td><td><img id="3-8" height=70 width=70></td><td><img id="3-9" height=70 width=70></td><td><img id="3-10" height=70 width=70></td><td><img id="3-11" height=70 width=70></td><td><img id="3-12" height=70 width=70></td><td><img id="3-13" height=70 width=70></td><td><img id="3-14" height=70 width=70></td><td><img id="3-15" height=70 width=70></td><td><img id="3-16" height=70 width=70></td><td><img id="3-17" height=70 width=70></td></tr><tr><td><img id="4-0" height=70 width=70></td><td><img id="4-1" height=70 width=70></td><td><img id="4-2" height=70 width=70></td><td><img id="4-3" height=70 width=70></td><td><img id="4-4" height=70 width=70></td><td><img id="4-5" height=70 width=70></td><td><img id="4-6" height=70 width=70></td><td><img id="4-7" height=70 width=70></td><td><img id="4-8" height=70 width=70></td><td><img id="4-9" height=70 width=70></td><td><img id="4-10" height=70 width=70></td><td><img id="4-11" height=70 width=70></td><td><img id="4-12" height=70 width=70></td><td><img id="4-13" height=70 width=70></td><td><img id="4-14" height=70 width=70></td><td><img id="4-15" height=70 width=70></td><td><img id="4-16" height=70 width=70></td><td><img id="4-17" height=70 width=70></td></tr><tr><td><img id="5-0" height=70 width=70></td><td><img id="5-1" height=70 width=70></td><td><img id="5-2" height=70 width=70></td><td><img id="5-3" height=70 width=70></td><td><img id="5-4" height=70 width=70></td><td><img id="5-5" height=70 width=70></td><td><img id="5-6" height=70 width=70></td><td><img id="5-7" height=70 width=70></td><td><img id="5-8" height=70 width=70></td><td><img id="5-9" height=70 width=70></td><td><img id="5-10" height=70 width=70></td><td><img id="5-11" height=70 width=70></td><td><img id="5-12" height=70 width=70></td><td><img id="5-13" height=70 width=70></td><td><img id="5-14" height=70 width=70></td><td><img id="5-15" height=70 width=70></td><td><img id="5-16" height=70 width=70></td><td><img id="5-17" height=70 width=70></td></tr></table>
+<br><table><tr>
+<td class="inv" style="max-width:35%;min-width:30%;" width=25%><div id="inventory" style="overflow-y:scroll;border-width:0;max-height:150px;"></div></td>
+<td width=15%><div id='info' style="border-width:0;"></div><label for="xp">XP: </label><progress id="xp" max=20 value=0></td>
+<td style="padding-left:50;" width=10%><button id="copyright">See copyright</button><br><br><button id="controls">Controls</button></td>
+<td class="inv" width=25%><div id="debug" style="overflow-y:scroll;border-width:0;max-height:150px;"></div></td></tr></table></div><div id="gen">
+<br><br><p>Generator:<br><br>You have <span id="gmoney"></span>ǥ<br><br>Currently selected: <span id="gcsel"></span></p><br><br><button id="gsel">Select</button><br><button id="gbuy">Buy</button><br><br>
+<table style="width:100%"><tr><th class="s">Generator mode</th><th class="s">ID</th><th class="s">Bought?</th><th class="s">Cost</th></tr>
+
+<tr><td class="s">Plains</td><td class="s">1</td><td class="s" id="gb-plains"></td><td class="s">0ǥ</td></tr>
+<tr><td class="s">Upper Caves</td><td class="s">2</td><td class="s" id="gb-caves1"></td><td class="s">1ǥ</td></tr>
+<tr><td class="s">Lower Caves</td><td class="s">3</td><td class="s" id="gb-caves2"></td><td class="s">2ǥ</td></tr>
+<tr><td class="s">Mushroom Fields</td><td class="s">4</td><td class="s" id="gb-mfields"></td><td class="s">5ǥ</td></tr>
+<tr><td class="s">Nether Wastes</td><td class="s">5</td><td class="s" id="gb-netherw"></td><td class="s">3ǥ</td></tr>
+<tr><td class="s">Snowy Beach</td><td class="s">6</td><td class="s" id="gb-snowb"></td><td class="s">2ǥ</td></tr>
+<tr><td class="s">Ocean Floor</td><td class="s">7</td><td class="s" id="gb-oceanf"></td><td class="s">1ǥ</td></tr>
+<tr><td class="s">Basalt Deltas</td><td class="s">8</td><td class="s" id="gb-bdelta"></td><td class="s">3ǥ</td></tr>
+<tr><td class="s">Amethyst Geode</td><td class="s">9</td><td class="s" id="gb-geode"></td><td class="s">2ǥ</td></tr>
+<tr><td class="s">Soul Sand Valley</td><td class="s">10</td><td class="s" id="gb-ssvall"></td><td class="s">3ǥ</td></tr>
+<tr><td class="s">Bastion</td><td class="s">11</td><td class="s" id="gb-bastion"></td><td class="s">6ǥ</td></tr>
+
+</table></div><div id="upgrades"><br><br><br><br><br><br><br><br><table style="width:100%">
+
+<tr><th class="s">Item</th><th class="s">Price</th><th class="s">ID for buying</th></tr>
+<tr><td class="s">Layer above</td><td id="lprice-1" class="s"></td><td class="s">1</td></tr>
+<tr><td class="s">Layer below</td><td id="lprice-2" class="s"></td><td class="s">2</td></tr>
+<tr><td class="s">Bucket -> Water Bucket</td><td class="s">$45</td><td class="s">3</td></tr>
+<tr><td class="s">Seeds</td><td class="s">$100</td><td class="s">4</td></tr>
+<tr><td class="s">Potato</td><td class="s">$100</td><td class="s">5</td></tr>
+<tr><td class="s">Carrot</td><td class="s">$100</td><td class="s">6</td></tr>
+<tr><td class="s">Grass Block</td><td class="s">$25</td><td class="s">7</td></tr>
+<tr><td class="s" id='rtsinfo'></td><td class="s" id="rtsprice"></td><td class="s">8</td></tr>
+<tr id="servant-upgrade"><td class="s">Unlock avatar</td><td class="s">$25,000</td><td class="s">9<td></tr>
+<tr><td class="s">1ǥ</td><td class="s">$5000</td><td class="s">10</td></tr>
+</table><br><div id="money2"></div></div>
+
+<div id="crafting">
+<p>Inventory:<br></p><div class="inv" id="inventory2" style="max-width:30%;overflow-y:scroll;border-width:0;"></div>
+<br><br><p>Crafting:</p><br>
+<table style="width:100%"><tr>
+<td class="s"><button id="cb-nature" style="margin:0;width:100;">Nature</button></td>
+<td class="s"><button id="cb-stone" style="margin:0;width:100;">Stone</button></td>
+<td class="s"><button id="cb-nether" style="margin:0;width:100;">Other</button></td>
+<td class="s"><button id="cb-tools" style="margin:0;width:100;">Tools</button></td>
+<td class="s"><button id="cb-other" style="margin:0;width:100;">Food</button></td>
+<td class="s"><button id="cb-smelting" style="margin:0;width:100;">Smelting</button></td>
+</tr></table><br>
+<div style="display:none;" id="cd-nature"><table style="width:100%;" id="crafting-nature"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div style="display:none;" id="cd-stone"><table style="width:100%;" id="crafting-stone"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div style="display:none;" id="cd-nether"><table style="width:100%;" id="crafting-nether"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div style="display:none;" id="cd-tools"><table style="width:100%;" id="crafting-tools"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div style="display:none;" id="cd-other"><table style="width:100%;" id="crafting-other"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div id="cd-smelting" style="display:none;"><br><p>note: smelting an item uses 1 fuel item</p><br><table style="width:100%" id="smelting-div"><tr><th class="s">Item</th><th class="s">Result</th><th class="s">Click to smelt</th></tr></table></div></div>
+<div id="servantm"><br>Avatar management:<br><br><table style="width:100%">
+<tr><td class="s">Layers that the avatar operates on</td><td class="s" id="servant_layers"></td><td class="s"><button id="servant_add_layer">Add layer</button></td><td class="s"><button id="servant_remove_layer">Remove layer</td></tr>
+<tr><td class="s">Blocks that the avatar destroys</td><td class="s" id="servant_break"></td><td class="s"><button id="servant_add_break">Add block</button></td><td class="s"><button id="servant_remove_break">Remove block</td></tr>
+<tr><td class="s">Blocks that the avatar places</td><td class="s" id="servant_place"></td><td class="s"><button id="servant_add_place">Add block</button></td><td class="s"><button id="servant_remove_place">Remove block</td></tr>
+<tr><td class="s">Items that the avatar sells</td><td class="s" id="servant_sell"></td><td class="s"><button id="servant_add_sell">Add item</button></td><td class="s"><button id="servant_remove_sell">Remove item</td></tr>
+</table></div><div id="slscreen">
+<textarea id="sltxt" rows=30 cols=120></textarea><br>
+<br><button id="slsave">Save</button>
+<br><button id="slload">Load</button>
+</div></div><script type="text/python" src="https://2dskyblock.github.io/versions/0.0.4/main.py"></script></body></html>                                                                                                                                                                                                                                                                                              

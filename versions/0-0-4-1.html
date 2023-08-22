@@ -1,0 +1,116 @@
+<! DOCTYPE html><!Copyright (c) 2023 speedydelete
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.>
+<html><head><title>
+
+2D Skyblock 0.0.4.1
+
+</title><meta charset="utf-8"><style>
+
+.inv {max-height:150px}
+.s {border: 1px solid black; padding: 5; margin: 5;}
+table {border-collapse: collapse;}
+td {border:none; padding: 0; margin: 0;}
+td.b {padding:10; margin:0;}
+
+</style>
+<script type="text/javascript" src="https://2dskyblock.github.io/brython.js"></script><script type="text/javascript" src="https://2dskyblock.github.io/brython_stdlib.js"></script></head>
+<script type="text/javascript">
+var mobile = function() {
+  var ele = document.getElementsByClassName('b2');
+  for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.fontSize = "20px";
+  };  
+};
+</script>
+<body onload="brython()" id="body" style="tab-size:4;"><div id="capsule" style="position:relative;display:none;" height=100% width=100%><div id='game'>
+<table><tr><td><img id="0-0" height=70 width=70></td><td><img id="0-1" height=70 width=70></td><td><img id="0-2" height=70 width=70></td><td><img id="0-3" height=70 width=70></td><td><img id="0-4" height=70 width=70></td><td><img id="0-5" height=70 width=70></td><td><img id="0-6" height=70 width=70></td><td><img id="0-7" height=70 width=70></td><td><img id="0-8" height=70 width=70></td><td><img id="0-9" height=70 width=70></td><td><img id="0-10" height=70 width=70></td><td><img id="0-11" height=70 width=70></td><td><img id="0-12" height=70 width=70></td><td><img id="0-13" height=70 width=70></td><td><img id="0-14" height=70 width=70></td><td><img id="0-15" height=70 width=70></td><td><img id="0-16" height=70 width=70></td><td><img id="0-17" height=70 width=70></td></tr><tr><td><img id="1-0" height=70 width=70></td><td><img id="1-1" height=70 width=70></td><td><img id="1-2" height=70 width=70></td><td><img id="1-3" height=70 width=70></td><td><img id="1-4" height=70 width=70></td><td><img id="1-5" height=70 width=70></td><td><img id="1-6" height=70 width=70></td><td><img id="1-7" height=70 width=70></td><td><img id="1-8" height=70 width=70></td><td><img id="1-9" height=70 width=70></td><td><img id="1-10" height=70 width=70></td><td><img id="1-11" height=70 width=70></td><td><img id="1-12" height=70 width=70></td><td><img id="1-13" height=70 width=70></td><td><img id="1-14" height=70 width=70></td><td><img id="1-15" height=70 width=70></td><td><img id="1-16" height=70 width=70></td><td><img id="1-17" height=70 width=70></td></tr><tr><td><img id="2-0" height=70 width=70></td><td><img id="2-1" height=70 width=70></td><td><img id="2-2" height=70 width=70></td><td><img id="2-3" height=70 width=70></td><td><img id="2-4" height=70 width=70></td><td><img id="2-5" height=70 width=70></td><td><img id="2-6" height=70 width=70></td><td><img id="2-7" height=70 width=70></td><td><img id="2-8" height=70 width=70></td><td><img id="2-9" height=70 width=70></td><td><img id="2-10" height=70 width=70></td><td><img id="2-11" height=70 width=70></td><td><img id="2-12" height=70 width=70></td><td><img id="2-13" height=70 width=70></td><td><img id="2-14" height=70 width=70></td><td><img id="2-15" height=70 width=70></td><td><img id="2-16" height=70 width=70></td><td><img id="2-17" height=70 width=70></td></tr><tr><td><img id="3-0" height=70 width=70></td><td><img id="3-1" height=70 width=70></td><td><img id="3-2" height=70 width=70></td><td><img id="3-3" height=70 width=70></td><td><img id="3-4" height=70 width=70></td><td><img id="3-5" height=70 width=70></td><td><img id="3-6" height=70 width=70></td><td><img id="3-7" height=70 width=70></td><td><img id="3-8" height=70 width=70></td><td><img id="3-9" height=70 width=70></td><td><img id="3-10" height=70 width=70></td><td><img id="3-11" height=70 width=70></td><td><img id="3-12" height=70 width=70></td><td><img id="3-13" height=70 width=70></td><td><img id="3-14" height=70 width=70></td><td><img id="3-15" height=70 width=70></td><td><img id="3-16" height=70 width=70></td><td><img id="3-17" height=70 width=70></td></tr><tr><td><img id="4-0" height=70 width=70></td><td><img id="4-1" height=70 width=70></td><td><img id="4-2" height=70 width=70></td><td><img id="4-3" height=70 width=70></td><td><img id="4-4" height=70 width=70></td><td><img id="4-5" height=70 width=70></td><td><img id="4-6" height=70 width=70></td><td><img id="4-7" height=70 width=70></td><td><img id="4-8" height=70 width=70></td><td><img id="4-9" height=70 width=70></td><td><img id="4-10" height=70 width=70></td><td><img id="4-11" height=70 width=70></td><td><img id="4-12" height=70 width=70></td><td><img id="4-13" height=70 width=70></td><td><img id="4-14" height=70 width=70></td><td><img id="4-15" height=70 width=70></td><td><img id="4-16" height=70 width=70></td><td><img id="4-17" height=70 width=70></td></tr><tr><td><img id="5-0" height=70 width=70></td><td><img id="5-1" height=70 width=70></td><td><img id="5-2" height=70 width=70></td><td><img id="5-3" height=70 width=70></td><td><img id="5-4" height=70 width=70></td><td><img id="5-5" height=70 width=70></td><td><img id="5-6" height=70 width=70></td><td><img id="5-7" height=70 width=70></td><td><img id="5-8" height=70 width=70></td><td><img id="5-9" height=70 width=70></td><td><img id="5-10" height=70 width=70></td><td><img id="5-11" height=70 width=70></td><td><img id="5-12" height=70 width=70></td><td><img id="5-13" height=70 width=70></td><td><img id="5-14" height=70 width=70></td><td><img id="5-15" height=70 width=70></td><td><img id="5-16" height=70 width=70></td><td><img id="5-17" height=70 width=70></td></tr></table>
+<br><table><tr>
+<td width=5% style="max-height:150px;padding:10;"><table><tr><button height=100% width=100% id="inv-u"><img height=100% width=100% src="https://2dskyblock.github.io/assets/up-arrow.png"></button></tr><tr><button height=100% width=100% id="inv-d"><img height=100% width=100% src="https://2dskyblock.github.io/assets/down-arrow.png"></button></tr></table></td>
+<td class="inv" style="max-width:35%;min-width:30%;" width=25%><div id="inventory" style="overflow-y:scroll;border-width:0;max-height:150px;"></div></td>
+<td width=15%><div id='info' style="border-width:0;"></div><label for="xp">XP: </label><progress id="xp" max=20 value=0></td>
+<td style="padding:50;" width=15%><br><button id="controls" class="nm">Controls</button><br><a href="https://github.com/2dskyblock/2dskyblock.github.io/issues">Bug reports</a><br><a href="https://2dskyblock.github.io/copyright">Copyright</a></td>
+<td width=30% style="padding:0;margin:0;"><table><tr><td class="b"><button class="b2" id="b-craft">Crafting</button></td><td class="b"><button class="b2" id="b-shop">Shop</button></td><td class="b"><button id="b-up" class="b2">Up 1 layer</button></td></tr>
+<tr><td class="b"><button id="b-gen" class="b2">Generator</button></td><td class="b"><button class="b2" id="b-avatar">Avatar</button></td><td class="b"><button class="b2" id="b-down">Down 1 layer</button></td></tr>
+<tr><td class="b"><button id="b-backup" class="b2">Backups</button></td><td class="b"><button class="b2" id="b-save">Save</button></td><td><button class="b2" id="b-stats">Stats</button></td>
+</table></td></tr></table></div><div id="gen">
+<br><br><button id="back1">Back</button><br><br><p>Generator:<br><br>You have <span id="gmoney"></span>ǥ<br><br>Currently selected: <span id="gcsel"></span></p><br><br><button id="gsel">Select</button><br><button id="gbuy">Buy</button><br><br>
+<table style="width:100%"><tr><th class="s">Generator mode</th><th class="s">ID</th><th class="s">Bought?</th><th class="s">Cost</th></tr>
+
+<tr><td class="s">Plains</td><td class="s">1</td><td class="s" id="gb-plains"></td><td class="s">0ǥ</td></tr>
+<tr><td class="s">Upper Caves</td><td class="s">2</td><td class="s" id="gb-caves1"></td><td class="s">1ǥ</td></tr>
+<tr><td class="s">Lower Caves</td><td class="s">3</td><td class="s" id="gb-caves2"></td><td class="s">2ǥ</td></tr>
+<tr><td class="s">Mushroom Fields</td><td class="s">4</td><td class="s" id="gb-mfields"></td><td class="s">5ǥ</td></tr>
+<tr><td class="s">Nether Wastes</td><td class="s">5</td><td class="s" id="gb-netherw"></td><td class="s">3ǥ</td></tr>
+<tr><td class="s">Snowy Beach</td><td class="s">6</td><td class="s" id="gb-snowb"></td><td class="s">2ǥ</td></tr>
+<tr><td class="s">Ocean Floor</td><td class="s">7</td><td class="s" id="gb-oceanf"></td><td class="s">1ǥ</td></tr>
+<tr><td class="s">Basalt Deltas</td><td class="s">8</td><td class="s" id="gb-bdelta"></td><td class="s">3ǥ</td></tr>
+<tr><td class="s">Amethyst Geode</td><td class="s">9</td><td class="s" id="gb-geode"></td><td class="s">2ǥ</td></tr>
+<tr><td class="s">Soul Sand Valley</td><td class="s">10</td><td class="s" id="gb-ssvall"></td><td class="s">3ǥ</td></tr>
+<tr><td class="s">Bastion</td><td class="s">11</td><td class="s" id="gb-bastion"></td><td class="s">6ǥ</td></tr>
+
+</table></div><div id="upgrades"><br><br><button id="back2">Back</button><br><br><button id="upgrade-buy">Buy item</button><br><br><br><br><table style="width:100%">
+
+<tr><th class="s">Item</th><th class="s">Price</th><th class="s">ID for buying</th></tr>
+<tr><td class="s">Layer above</td><td id="lprice-1" class="s"></td><td class="s">1</td></tr>
+<tr><td class="s">Layer below</td><td id="lprice-2" class="s"></td><td class="s">2</td></tr>
+<tr><td class="s">Bucket -> Water Bucket</td><td class="s">$45</td><td class="s">3</td></tr>
+<tr><td class="s">Seeds</td><td class="s">$100</td><td class="s">4</td></tr>
+<tr><td class="s">Potato</td><td class="s">$100</td><td class="s">5</td></tr>
+<tr><td class="s">Carrot</td><td class="s">$100</td><td class="s">6</td></tr>
+<tr><td class="s">Grass Block</td><td class="s">$25</td><td class="s">7</td></tr>
+<tr><td class="s" id='rtsinfo'></td><td class="s" id="rtsprice"></td><td class="s">8</td></tr>
+<tr id="servant-upgrade"><td class="s">Unlock avatar</td><td class="s">$25,000</td><td class="s">9<td></tr>
+<tr><td class="s">1ǥ</td><td class="s">$5,000</td><td class="s">10</td></tr>
+</table><br><div id="money2"></div></div>
+
+<div id="crafting">
+<br><br><button id="back3">Back</button><br><br><p>Inventory:<br></p><div class="inv" id="inventory2" style="max-width:30%;overflow-y:scroll;border-width:0;"></div>
+<br><br><p>Crafting:</p><br>
+<table style="width:100%"><tr>
+<td class="s"><button id="cb-nature" style="margin:0;width:100;">Nature</button></td>
+<td class="s"><button id="cb-stone" style="margin:0;width:100;">Stone</button></td>
+<td class="s"><button id="cb-nether" style="margin:0;width:100;">Other</button></td>
+<td class="s"><button id="cb-tools" style="margin:0;width:100;">Tools</button></td>
+<td class="s"><button id="cb-other" style="margin:0;width:100;">Food</button></td>
+<td class="s"><button id="cb-smelting" style="margin:0;width:100;">Smelting</button></td>
+</tr></table><br>
+<div style="display:none;" id="cd-nature"><table style="width:100%;" id="crafting-nature"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div style="display:none;" id="cd-stone"><table style="width:100%;" id="crafting-stone"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div style="display:none;" id="cd-nether"><table style="width:100%;" id="crafting-nether"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div style="display:none;" id="cd-tools"><table style="width:100%;" id="crafting-tools"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div style="display:none;" id="cd-other"><table style="width:100%;" id="crafting-other"><tr><th class="s">Input</th><th class="s">Output</th><th class="s">Click to craft</th></tr></table></div>
+<div id="cd-smelting" style="display:none;"><br><p>note: smelting an item uses 1 fuel item</p><br><table style="width:100%" id="smelting-div"><tr><th class="s">Item</th><th class="s">Result</th><th class="s">Click to smelt</th></tr></table></div></div>
+<div id="servantm"><br><br><button id="back4">Back</button><br><br>Avatar management:<br><br><table style="width:100%">
+<tr><td class="s">Layers that the avatar operates on</td><td class="s" id="servant_layers"></td><td class="s"><button id="servant_add_layer">Add layer</button></td><td class="s"><button id="servant_remove_layer">Remove layer</td></tr>
+<tr><td class="s">Blocks that the avatar destroys</td><td class="s" id="servant_break"></td><td class="s"><button id="servant_add_break">Add block</button></td><td class="s"><button id="servant_remove_break">Remove block</td></tr>
+<tr><td class="s">Blocks that the avatar places</td><td class="s" id="servant_place"></td><td class="s"><button id="servant_add_place">Add block</button></td><td class="s"><button id="servant_remove_place">Remove block</td></tr>
+<tr><td class="s">Items that the avatar sells</td><td class="s" id="servant_sell"></td><td class="s"><button id="servant_add_sell">Add item</button></td><td class="s"><button id="servant_remove_sell">Remove item</td></tr>
+</table></div><div id="slscreen"><br><br><button id="back5">Back</button><br><br>
+<textarea id="sltxt" rows=30 cols=120></textarea><br>
+<br><button id="slsave">Save</button>
+<br><button id="slload">Load</button>
+</div></div>
+<script type="text/javascript">
+var check = 0;
+(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+if(check){
+    mobile();
+};
+</script><script type="text/python" src="https://2dskyblock.github.io/versions/0.0.4.1/main.py"></script></body></html>
