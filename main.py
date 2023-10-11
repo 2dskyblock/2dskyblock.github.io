@@ -1424,7 +1424,7 @@ def mainloop():
     global document, c, fps, lasttime, oldc, levels, xp, servant_layers, \
            servant_break, servant_place, servant_sell, game_time, time, \
            has_servant, gen_money, has_gens
-    x_l_offset = l_offset if l_offset > 1 else 0
+    x_l_offset = l_offset - 1
     c += 1
     if time() - 1 > lasttime:
         lasttime = time()
