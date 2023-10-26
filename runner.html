@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--Copyright (c) 2023 speedydelete
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.-->
+        <script type="text/javascript" src="https://2dskyblock.github.io/brython.js"></script>
+        <script type="text/javascript" src="https://2dskyblock.github.io/brython_stdlib.js"></script>
+    </head>
+    <body onload="brython()">
+        <script type="text/python">
+
+from browser import document, alert as _alert
+from html import escape
+
+def alert(*args, sep=' ', end=''):
+    _alert(sep.join([str(x) for x in args]) + end)
+
+import sys
+
+class stderr_writer:
+    def write(self, x):
+        document.write(escape(x).replace('\n', '<br>').replace(' ', '&nbsp;'))
+
+sys.stderr = stderr_writer()
+
+out = ''
+
+with open(document.query['h'], 'r') as f:
+    out += f.read()
+out = out[:-len('</body></html>')]
+out += '<'
+out += 'script type="text/python">'
+with open(document.query['p'], 'r') as f:
+    out += f.read()
+out += '<'
+out += '/script></body></html>'
+
+alert(out)
+
+document.write(out)
+
+</script>
+    </body>
+</html>
