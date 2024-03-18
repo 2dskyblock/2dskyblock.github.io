@@ -250,6 +250,7 @@ items = [
     [174, 'Red Sandstone', 10, True, ['m_pick', 'requires_pick_1'], None],
     [175, 'Cut Red Sandstone', 10, True, ['m_pick', 'requires_pick_1'], None],
     [176, 'Chiseled Red Sandstone', 10, True, ['m_pick', 'requires_pick_1'], None],
+    [177, 'Herobrine', 1000000, None, ['noplace', 'can_break_pick_1', 'can_break_pick_2', 'can_break_pick_3'], None],
 ]
 
 generator = [
@@ -261,7 +262,7 @@ generator = [
     [2, [115] * 20 + [117] * 5 + [118] * 3 + [119], 'gb-snowb', 'Snowy Beach'],
     [1, [109, 112, 113, 114] * 10 + [139], 'gb-oceanf', 'Ocean Floor'],
     [3, [132, 133, 133] * 400 + [156], 'gb-bdelta', 'Basalt Deltas'],
-    [2, [152, 133, 165], 'gb-geode', 'Amethyst Geode'],
+    [2, [152, 133, 165] * 1000 + [177], 'gb-geode', 'Amethyst Geode'],
     [3, [107, 108, 156] * 400 + [156], 'gb-ssvall', 'Soul Sand Valley'],
     [6, [134, 135, 136, 137, 138] * 9 + [139] * 3 + [41], 'gb-bastion', 'Bastion'],
 ]
